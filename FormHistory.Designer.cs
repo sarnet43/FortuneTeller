@@ -68,6 +68,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Name = "FormHistory";
             this.Text = "내역 불러오기";
+            this.Load += new System.EventHandler(this.FormHistory_Load);
             this.ResumeLayout(false);
 
         }
