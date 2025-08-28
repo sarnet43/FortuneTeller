@@ -52,6 +52,13 @@ namespace FortuneTeller
 
         }
 
+        private string GetForturn()
+        {
+            Random random = new Random();
+            int index = random.Next(0, results.Count);
+            return results[index];
+        }
+
         private void 내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormHistory form = Application.OpenForms["FormHistory"] as FormHistory;
