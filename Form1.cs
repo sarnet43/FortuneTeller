@@ -117,5 +117,20 @@ namespace FortuneTeller
                 MessageBox.Show($"알 수 없는 오류 발생! \n{ex.Message}", "알 수 없는 오류");
             }
         }
+
+        public void LoadHistory(string histroy)
+        {
+            string birthday = histroy.Split('|')[0].Split(' ')[0];
+            string birthhour = histroy.Split('|')[0].Split(' ')[1];
+            tdBirthday.Text = birthday;
+            tbBirthhour.Text = birthhour;  
+
+            string saju = histroy.Split('|')[1];
+            string message = histroy.Split('|')[2];
+
+            tbResult.Text = $"{birthday} {birthhour}{Environment.NewLine}"
+                + $"{saju}{Environment.NewLine}"
+                + $"{message}";
+        }
     }
 }
